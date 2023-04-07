@@ -1,0 +1,17 @@
+#include<stdio.h>
+#define DATA_SIZE 1000
+int main()
+{
+	char data[DATA_SIZE];
+	FILE *fp;
+	fp = fopen("coding.txt","r");
+	if(fp==NULL)
+	{
+		printf("Error Opening file\n");
+		return 1;
+	}
+	fgets(data,DATA_SIZE,fp);
+  fclose(fp);
+	printf("Read data from file: %s\n",fp);
+	return 0;
+}
